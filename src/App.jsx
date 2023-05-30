@@ -15,9 +15,12 @@ export default function App() {
 		/>
 	})
 
-	return (<>
-		<Header />
-		{concertElement}
-	</>
+	return (
+		<>
+			<Header />
+			<div className="grid-container>">
+				{concertElement}
+			</div>
+		</>
 	)
 }
