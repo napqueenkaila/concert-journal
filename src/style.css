@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    height: 100vh
 }
 
 /* HEADER */
@@ -18,8 +19,6 @@ header {
     align-items: center;
     gap: 0.5rem;
     height: 10vh;
-    /* min-height: 100px; */
-    margin-bottom: 2em;
 }
 
 .header-text {
@@ -34,14 +33,17 @@ header {
     max-width: 450px;
     width: 95%;
     height: fit-content;
-    margin: 0 auto;
+    margin: 1.75em auto;
+    padding-left: 1em;
+    padding-right: 1em;
     display: flex;
     align-items: center;
+    /* border: 3px red solid; */
 }
 
 hr {
     width: 90%;
-    margin: 1.25em auto;
+    margin: 0 auto;
     border: 1px solid #F5F5F5;
 }
 
@@ -56,20 +58,22 @@ hr {
 }
 
 .outer-container {
+    height: 168px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .inner-container {
     display: flex;
     align-items: center;
+    gap: .5em
 }
 
 .concert-tour {
     font-weight: 700;
-    font-size: 1.55rem;
-    margin-bottom: .25em;
-    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: .2em;
     text-decoration: underline;
 }
 
@@ -77,7 +81,7 @@ hr {
     font-size: 1.2rem;
     font-weight: 600;
     color: #2B283A;
-    margin-bottom: .25em;
+    margin-bottom: .2em;
 }
 
 .concert-acts {
@@ -96,7 +100,7 @@ hr {
 }
 
 .location-icon {
-    width: 0.5em;
+    width: 0.3em;
     object-fit: cover;
 }
 
@@ -111,64 +115,8 @@ hr {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-left: .5em;
-        margin-right: .5em;
-    }
-
-    .concert-container {
-        height: 40vh;
-    }
-
     .concert-img {
-        margin-right: .75em;
-    }
-
-    .concert-tour {
-        font-size: 1.2rem;
-    }
-
-    .concert-band {
-        font-size: .75rem;
-    }
-
-    .concert-acts {
-        font-size: .55rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width:1024px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-left: .5em;
-        margin-right: .5em;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-left: 1.25em;
-        margin-right: 1.25em;
-    }
-
-    .concert-container {
-        height: 40vh;
-    }
-
-    .inner-container {
-        margin-top: .5em;
-    }
-
-    .concert-img {
-        margin-right: 1em;
-        max-width: 250px;
-        width: 40%;
-        height: 35vh;
+        margin-right: 1.75em;
     }
 
     .concert-tour {
@@ -180,16 +128,92 @@ hr {
     }
 
     .concert-acts {
-        font-size: .8rem;
+        font-size: .75rem;
+    }
+
+    .concert-date {
+        font-size: 0.65rem;
+    }
+
+    .concert-location {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px) {
+    .concert-img {
+        max-width: 150px;
+        width: 35%;
+        height: 200px;
+    }
+
+    .concert-tour {
+        font-size: 1.75rem
+    }
+
+    .concert-band {
+        font-size: 1.35rem;
+    }
+
+    .concert-acts {
+        font-size: 1rem;
+    }
+
+    .concert-date {
+        font-size: 0.75rem;
+    }
+
+    .concert-location {
+        font-size: 0.75rem;
+    }
+
+    .concert-container {
+        margin: 2em auto;
+        height: fit-content;
+    }
+
+    .outer-container {
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .concert-container {
+        height: fit-content;
+        max-width: unset;
+        width: 80%;
+        /* border: 3px red solid; */
+
+    }
+
+    .outer-container {
+        height: fit-content;
+    }
+
+    .concert-img {
+        margin-right: 2em;
+        max-width: 300px;
+        
+    }
+
+    .concert-tour {
+        font-size: 1.75rem;
+    }
+
+    .concert-band {
+        font-size: 1.35rem;
+    }
+
+    .concert-acts {
+        font-size: 1rem;
     }
 
     .concert-date {
         font-size: .75rem;
-        margin-top: 2.75em;
     }
 
     .concert-location {
-        font-size: .7rem;
+        font-size: .75rem;
     }
 
     .location-icon {
